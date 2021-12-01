@@ -1,27 +1,35 @@
 <?php include ("template/cabecera.php"); ?>
-        <div class="jumbotron jumbotron-fluid" style="text-align: center;"> 
-            <div class="container" style="text-align: center;">
-                <h1 class="display-3">Iniciar sesion</h1>
-                <p class="lead">Bienvenido de vuelta</p>
-                <hr class="my-2">
-                <a href="register.php" target="_blank">¿No tienes cuenta?</a>
-                <p>
+<div class="custom container-fluid d-flex align-items-center justify-content-center">
+    <div class="row bg-light border-dark">
+      <div class="col mt-5 col-xs-12 col-md-12 col-lg-12">
+        <h1 style="text-align:center">Iniciar Sesion</h1>
+        <form action="/login_check" method="post">
+              
+          	   <div class="form-group">
+                <input type="text" class="form-control"  id="username" name="_username" value="" placeholder="Username" required="required" />
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          	  </div>
+            	<div class="form-group">
+                	<input type="password" class="form-control" id="password" name="_password" placeholder="Password" required="required" />
+                	<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            	</div>
 
-                
-                </p>
+              <div class="form-group">
+                  <div class="form-check">
+                    <input type="checkbox" id="remember_me" name="_remember_me" class="form-check-input" />
+                    <label class="form-check-label" for="remember_me" >Remember me</label>
+                  </div>
+              </div>
+             <div class="form-row">
+             <div class="d-grid gap-2">
+                <button class="btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+                <!--<input type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit" value="Log in" />-->
+               </div>
             </div>
-        </div>
-
-        <form method="post" action="" name="signin-form">
-            <div class="form-element" style="text-align: center;">
-                <input type="text" name="username" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required />
-            </div>
-            <div class="form-element" style="text-align: center;">
-                <input type="password" name="password" placeholder="Contraseña" required />
-            </div>
-            <p>
-
-            </p>
-            <button class="btn btn-primary btn-lg" style="display: block; margin: 0 auto" type="submit" name="login" value="login" >Iniciar sesion </button>
-        </form>   
+        </form>
+      </div>
+      <hr class="my-2">
+        <a href="register.php" target="_blank">¿No tienes cuenta?</a>
+    </div>
+  </div>  
 <?php include ("template/pie.php"); ?>
