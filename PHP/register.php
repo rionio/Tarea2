@@ -11,16 +11,13 @@
 
 <form method="post" action="" name="signup-form">
     <div class="form-element" style="text-align: center;">
-        <label>Nombre usuario</label>
-        <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+        <input type="text" name="username" pattern="[a-zA-Z0-9]+" placeholder="Nombre de usuario" required />
     </div>
     <div class="form-element" style="text-align: center;">
-        <label>Email</label>
-        <input type="email" name="email" required />
+        <input type="email" name="email" placeholder="Correo electronico" required />
     </div>
     <div class="form-element" style="text-align: center;">
-        <label>Contraseña</label>
-        <input type="password" name="password" required />
+        <input type="password" name="password" placeholder="Contraseña" required />
     </div>
     <p>
         
