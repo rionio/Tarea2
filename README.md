@@ -1,5 +1,10 @@
-Links de referencia
-===
+# Tarea 2 Base de Datos
+
+## Librerias
+
+* [PHP dotenv](https://github.com/vlucas/phpdotenv)
+
+## Links de referencia
 
 * [HTML](https://www.w3schools.com/html/html_intro.asp)
 * [PHP](https://www.w3schools.com/php/default.asp)
