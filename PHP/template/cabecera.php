@@ -9,21 +9,26 @@
     <link rel="stylesheet" href="./CSS/bootstrap.min.css"/>
 </head>
 <body>
-
+    
     <nav class="navbar navbar-expand navbar-light bg-light">
         <ul class="nav navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="index.php">Pagina Principal</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="productos.php">Productos</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Carrito</a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="login.php">Iniciar sesion</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="register.php">Registrarse</a>
             </li>
+            
         </ul>
     </nav>
 

@@ -1,13 +1,12 @@
 <?php include("template/cabecera.php"); ?>
 
             <div class="jumbotron">
-                <h1 class="display-2">Tienda</h1>
-                <p class="lead">Bienvenido</p>
+                <h1 class="display-1" style="text-align: center;">BIENVENIDO</h1>
+                <p class="lead" style="text-align: center;">Pasese por nuestros productos</p>
                 <hr class="my-2">
-                <p>More info</p>
-                <p class="lead">
-                    <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-                </p>
+                <img src="https://somoskudasai.com/wp-content/uploads/2021/06/portada_wonder-egg-12.jpg">
+
+
             </div>
 
 

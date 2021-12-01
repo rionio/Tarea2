@@ -14,15 +14,13 @@
 
         <form method="post" action="" name="signin-form">
             <div class="form-element" style="text-align: center;">
-                <label>Nombre usuario: </label>
-                <input type="text" name="username" pattern="[a-zA-Z0-9]+" required />
+                <input type="text" name="username" placeholder="Usuario" pattern="[a-zA-Z0-9]+" required />
             </div>
             <div class="form-element" style="text-align: center;">
-                <label>Contraseña:</label>
-                <input type="password" name="password" required />
+                <input type="password" name="password" placeholder="Contraseña" required />
             </div>
             <p>
-                
+
             </p>
             <button class="btn btn-primary btn-lg" style="display: block; margin: 0 auto" type="submit" name="login" value="login" >Iniciar sesion </button>
         </form>   
