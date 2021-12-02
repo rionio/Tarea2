@@ -13,13 +13,9 @@ class CConexion {
         $db_user = $_ENV['DB_USER'];
         $db_password = $_ENV['DB_PASSWORD'];
 
-        try {
-            $conn = new PDO ("pgsql:host = $db_host;dbname = $db_name", $db_user, $db_password);
-            echo "Conexion hecha correctamente";
-        } catch (PDOExecption $exp) {
-            echo ("No se pudo conectar a la base de datos, $exp");
-        }
-        
+        $conn = pg_connect("host=$db_host port=$db_port dbname=$db_name user=$db_user password=$db_password") or die ("no se puede conectar");
+        echo pg_last_error($conn);
+    
         return $conn;
     }
 
