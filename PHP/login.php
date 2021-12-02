@@ -3,7 +3,7 @@
     <div class="row bg-light border-dark">
       <div class="col mt-5 col-xs-12 col-md-12 col-lg-12">
         <h1 style="text-align:center">Iniciar Sesion</h1>
-        <form action="./sesion.php" method="post">
+        <form action="./sesion.php" method="POST">
               
           	   <div class="form-group">
                 <input type="text" class="form-control"  id="username" name="_username" value="" placeholder="Username" required="required" />
@@ -17,12 +17,12 @@
               <div class="form-group">
                   <div class="form-check">
                     <input type="checkbox" id="remember_me" name="_remember_me" class="form-check-input" />
-                    <label class="form-check-label" for="remember_me" >Remember me</label>
+                    <label class="form-check-label" for="remember_me" >Recuerdame</label>
                   </div>
               </div>
              <div class="form-row">
              <div class="d-grid gap-2">
-                <button class="btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+                <button class="btn btn-outline-success" type="submit">Iniciar Sesion</button>
                 <!--<input type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit" value="Log in" />-->
                </div>
             </div>

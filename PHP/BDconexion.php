@@ -1,11 +1,11 @@
 <?php
-require('../vendor/autoload.php');
+require '../vendor/autoload.php';
 class CConexion {
     
     static function ConexionBD(){
         
         $dotenv = Dotenv\Dotenv::createImmutable('../');
-        $dotenv->load();
+        $dotenv->safeload();
 
         $db_host = $_ENV['DB_HOST'];
         $db_name = $_ENV['DB_NAME'];

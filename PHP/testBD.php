@@ -1,5 +1,5 @@
 <?php
-    require "./BDconexion.php";
+    require './BDconexion.php';
 
     $gbd = CConexion::ConexionBD();
 
@@ -13,7 +13,7 @@
     if (!$result) {
         echo "Ocurrió un error.\n";
         exit;
-      }
+    }
     while ($row = pg_fetch_row($result)) {
         echo "Email: $row[0]  Nombre: $row[1]";
         echo "<br />\n";

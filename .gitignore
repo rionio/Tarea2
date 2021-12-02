@@ -1,2 +1,9 @@
 #Variables de entorno
 .env
+
+#Carpetas que necesitan instalacion
+vendor
+
+#Configuration files
+.json
+.lock
