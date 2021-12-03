@@ -4,7 +4,7 @@
       <div class="col mt-3 col-xs-12 col-md-12 col-lg-12">
         <h1 style="text-align:center">Registrarse</h1>
         <h5 style="text-align:center">Es gratis</h5>
-        <form action="./newsession.php" name="signup-form" method="POST">    
+        <form action="./User.new.php" name="signup-form" method="POST">    
           <div class="form-group">
             <input type="text" class="form-control" id="user" name="_username" pattern="[a-zA-Z0-9]+" placeholder="Nombre de usuario" required />                <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>

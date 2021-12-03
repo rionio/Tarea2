@@ -43,10 +43,14 @@
       </ul>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link">test</a> <!-- -en test cambialo x user-->
+          <?php
+            session_start();
+            $user=$_SESSION['nombre_usuario'];
+            echo "<a class='nav-link'> $user</a>";
+          ?><!-- -en test cambialo x user-->
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cerrarsesion.php">Salir</a>
+          <a class="nav-link" href="User.close.php">Salir</a>
         </li>
       </ul>
 <!--basicamente este archivo va a ser general hasta que cierre sesion, por eso el cerrarsesion en el boton salir

@@ -43,10 +43,10 @@
       </ul>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="login.php">Iniciar Sesion</a>
+          <a class="nav-link" href="UserSignIn.php">Iniciar Sesion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="register.php">Registrarse</a>
+          <a class="nav-link" href="UserSignUp.php">Registrarse</a>
         </li>
       </ul>
 

@@ -11,7 +11,7 @@ $consulta=pg_execute($conn,"my_query",array($user,$pass));
 $cantidad=pg_num_rows($consulta);
 if($cantidad>0){
     $_SESSION['nombre_usuario']=$user;
-    header("location: ingreso.php"); //redireccion 
+    header("location: UserIndex.php"); //redireccion 
 }else{
     echo "datos erroneos";
 }

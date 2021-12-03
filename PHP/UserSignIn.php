@@ -3,7 +3,7 @@
     <div class="row bg-light border-dark">
       <div class="col mt-5 col-xs-12 col-md-12 col-lg-12">
         <h1 style="text-align:center">Iniciar Sesion</h1>
-        <form action="./sesion.php" method="POST">
+        <form action="./User.session.php" method="POST">
               
           	   <div class="form-group">
                 <input type="text" class="form-control"  id="username" name="_username" value="" placeholder="Username" required="required" />
@@ -29,7 +29,7 @@
         </form>
       </div>
       <hr class="my-2">
-        <a href="register.php">¿No tienes cuenta?</a>
+        <a href="UserSignUp.php">¿No tienes cuenta?</a>
     </div>
   </div>  
 <?php include ("template/pie.php"); ?>
