@@ -42,20 +42,23 @@
         </form>
       </ul>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <?php
-            session_start();
-            $user=$_SESSION['nombre_usuario'];
-            echo "<a class='nav-link'> $user</a>";
-          ?><!-- -en test cambialo x user-->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="User.close.php">Salir</a>
+        <img src="https://lh3.googleusercontent.com/proxy/7GkW6bKqAnbzN4Yeg_4TkF6ItfqocMD1kMFUZrf7n5AtWuY9LieNOQjFO2nU93zVCaOQw1kJoeLqyi90frAX48xuQX7z7cycL-aYRu0vEmk1LhDIbGZZ0nAt6XJ_pu2xrv4koGo=w1200-h630-p-k-no-nu" width="50">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        <?php
+          //  session_start();
+          //  $user=$_SESSION['nombre_usuario'];
+          //  echo "<a class='nav-link'> $user</a>";
+          ?>test
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="User.close.php">Salir</a>
+        </div>
         </li>
       </ul>
-<!--basicamente este archivo va a ser general hasta que cierre sesion, por eso el cerrarsesion en el boton salir
-WARNING: todos los archivos que tenga que ver con un usuario registrado tendran el nombre de USER</>.php asi para clarificar
-y ordenar los archivos-->
+<!--quitale los comentarios y los tests, sabes que no me funca la base de datos XD-->
 
     </div>
   </div>
