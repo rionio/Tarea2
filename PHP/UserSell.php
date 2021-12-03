@@ -46,7 +46,7 @@
                 <img src="https://c.tenor.com/YvaE5INKypcAAAAC/money-cash.gif"
                 width="400">
                 </div>
-            </td>
+    </td>
 </tr>
 
 </table>
