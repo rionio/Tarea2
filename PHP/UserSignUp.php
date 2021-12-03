@@ -9,14 +9,14 @@
             <input type="text" class="form-control" id="user" name="_username" pattern="[a-zA-Z0-9]+" placeholder="Nombre de usuario" required />                <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group" style="text-align: center;">
-            <input type="email" class="form-control" id="email" name="_email" placeholder="Correo electronico" required />
+            <input type="text" class="form-control" id="email" name="_email" placeholder="Correo electronico" required />
           </div>
           <div class="form-group">
             <input type="date" class="form-control" id="date" name="_date" placeholder="Fecha de nacimiento" required="required" />
           	<span class="glyphicon glyphicon-lock form-control-feedback"></span>
         	</div>
           <div class="form-group">
-            <input type="text" class="form-control" id="rol" name="_rol" placeholder="ROL USM" required="required" />
+            <input type="text" class="form-control" id="rol" name="_rol" placeholder="ROL USM ex:2020305196" required="required" />
           	<span class="glyphicon glyphicon-lock form-control-feedback"></span>
         	</div>
           <div class="form-group">

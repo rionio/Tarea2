@@ -4,7 +4,7 @@
             <div class="jumbotron">
                 <h1 class="display-1" style="text-align: center;">BIENVENIDO, 
                     <?php 
-                        echo strtoupper($user);
+                        echo strtoupper($user); 
                     ?>
                 </h1> <!--en test cambialo por $user -->
                 <p class="lead" style="text-align: center;">Pasese por nuestros productos</p>
