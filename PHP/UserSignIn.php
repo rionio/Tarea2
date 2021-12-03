@@ -1,35 +1,26 @@
 <?php include ("template/cabecera.php"); ?>
-<div class="custom container-fluid d-flex align-items-center justify-content-center">
-    <div class="row bg-light border-dark">
-      <div class="col mt-5 col-xs-12 col-md-12 col-lg-12">
-        <h1 style="text-align:center">Iniciar Sesion</h1>
-        <form action="./User.session.php" method="POST">
-              
-          	   <div class="form-group">
-                <input type="text" class="form-control"  id="username" name="_username" value="" placeholder="Username" required="required" />
-                <span class="glyphicon glyphicon-user form-control-feedback"></span>
-          	  </div>
-            	<div class="form-group">
-                	<input type="password" class="form-control" id="password" name="_password" placeholder="Password" required="required" />
-                	<span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            	</div>
-
-              <div class="form-group">
-                  <div class="form-check">
-                    <input type="checkbox" id="remember_me" name="_remember_me" class="form-check-input" />
-                    <label class="form-check-label" for="remember_me" >Recuerdame</label>
-                  </div>
-              </div>
-             <div class="form-row">
-             <div class="d-grid gap-2">
-                <button class="btn btn-outline-success" type="submit">Iniciar Sesion</button>
-                <!--<input type="submit" class="btn btn-primary btn-block" id="_submit" name="_submit" value="Log in" />-->
-               </div>
-            </div>
+<div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;">
+	<div class="card login-form" style="	width:330px;margin:20px;">
+    <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
+      <h3 class="card-title text-center" style="font-weight:300;">Inicia Sesión</h3>
+      <div class="card-text">
+        <form action="./User.session.php" method="POST" style="	padding-top: 10px;font-size: 14px;margin-top: 30px;">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Correo Electronico</label>
+            <input type="email" class="form-control form-control-sm" name="_email" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <a href="#" style="float:right;font-size:12px;">¿olvidaste tu contraseña?</a>
+            <input type="password" class="form-control form-control-sm" name="_password" required>
+          </div>
+          <button type="submit" class="btn btn-outline-success" style="font-size: 15px;margin-top:20px;">Iniciar Sesión</button>
+          <div class="sign-up" style="	text-align:center;padding:20px 0 0;">
+            ¿No tienes una cuenta? <a href="UserSignUp.php">Registrate</a>
+          </div>
         </form>
       </div>
-      <hr class="my-2">
-        <a href="UserSignUp.php">¿No tienes cuenta?</a>
     </div>
-  </div>  
+  </div>
+</div> 
 <?php include ("template/pie.php"); ?>

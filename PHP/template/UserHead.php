@@ -53,7 +53,7 @@
         </a>
         <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Carrito</a>
-          <a class="dropdown-item" href="USERvender.php">Vender producto</a>
+          <a class="dropdown-item" href="UserSell.php">Vender producto</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="User.close.php">Salir</a>
         </div>
