@@ -43,10 +43,9 @@
         </form>
       </ul>
         <?php
-          if($status){
+           if($status){
             echo'
-                <ul class="navbar-nav mr-auto">
-                  <img src="https://lh3.googleusercontent.com/proxy/7GkW6bKqAnbzN4Yeg_4TkF6ItfqocMD1kMFUZrf7n5AtWuY9LieNOQjFO2nU93zVCaOQw1kJoeLqyi90frAX48xuQX7z7cycL-aYRu0vEmk1LhDIbGZZ0nAt6XJ_pu2xrv4koGo=w1200-h630-p-k-no-nu" width="50">
+                <ul class="navbar-nav mr-auto" style="width: 13%; float:right">
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     '
@@ -63,6 +62,8 @@
                       <a class="dropdown-item" href="User.close.php">Salir</a>
                     </div>
                   </li>
+                  <img src="https://lh3.googleusercontent.com/proxy/7GkW6bKqAnbzN4Yeg_4TkF6ItfqocMD1kMFUZrf7n5AtWuY9LieNOQjFO2nU93zVCaOQw1kJoeLqyi90frAX48xuQX7z7cycL-aYRu0vEmk1LhDIbGZZ0nAt6XJ_pu2xrv4koGo=w1200-h630-p-k-no-nu" width="50">
+
                 </ul>
             ';
           }else{
