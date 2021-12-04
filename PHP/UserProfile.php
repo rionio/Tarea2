@@ -1,7 +1,14 @@
-<?php include("template/USERhead.php"); ?>
+<?php 
+    include("template/Header.php"); 
+    if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: ./index.php');
+    exit;
+    }
+?>
 <div class="jumbotron">
     <h1 class="display-1">Perfil</h1>
-    <a href="User.Eprofile.php" class="lead">Editar perfil</a>
+    <a href="UserEditProfile.php" class="lead">Editar perfil</a>
     <p></p>
 </div>
 <div style="width: 60%; float:left">

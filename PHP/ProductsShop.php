@@ -1,4 +1,4 @@
-<?php include("template/cabecera.php"); ?>
+<?php include("template/Header.php"); ?>
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">

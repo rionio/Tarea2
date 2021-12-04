@@ -1,5 +1,11 @@
 <?php
 require './BDconexion.php'; //file conexion
+if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: ./index.php');
+    exit;
+}
+
 $conn = CConexion::ConexionBD();
 session_start();
 $email=$_POST['_email']; //extraxion de info del login
@@ -15,7 +21,7 @@ $datos=pg_fetch_row($consulta);
 if($cantidad>0){
     $_SESSION['nombre_usuario']=$datos[1];
     $_SESSION['ROL']= $datos[2];
-    header("location: UserIndex.php"); //redireccion 
+    header("location: index.php"); //redireccion 
 }else{
     session_destroy();
     echo('

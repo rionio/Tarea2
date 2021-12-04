@@ -1,5 +1,10 @@
 <?php
   require './BDconexion.php'; //file conexion
+  if(!isset($_SERVER['HTTP_REFERER'])){
+    // redirect them to your desired location
+    header('location: ./index.php');
+    exit;
+  }
   $conn = CConexion::ConexionBD();
   $user=$_POST['_username'];
   $email=$_POST['_email'];
@@ -27,7 +32,7 @@
   $flag_rol=pg_prepare($conn,"Validation_rol",$validation_rol_query);
   $flag_rol=pg_execute($conn,"Validation_rol",array($rol));
 
-  $registro=pg_prepare($conn,"Register",$reguister_query);
+  $registro=pg_prepare($conn,"Register",$register_query);
   $registro=pg_execute($conn,"Register",array($email,$user,$rol,$date,$pass));
 
   if(pg_num_rows($flag_email)>0 || pg_num_rows($flag_rol)>0){

@@ -1,4 +1,4 @@
-<?php include("template/USERhead.php"); ?>
+<?php include("template/Header.php"); ?>
     <p></p>
 <div class="jumbotron">
     <h1 class="display-3">Vender Producto</h1>

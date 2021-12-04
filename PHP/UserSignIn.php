@@ -1,4 +1,4 @@
-<?php include ("template/cabecera.php"); ?>
+<?php include ("template/Header.php"); ?>
 <div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;">
 	<div class="card login-form" style="	width:330px;margin:20px;">
     <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
