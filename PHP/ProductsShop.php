@@ -15,9 +15,9 @@ while ($show=pg_fetch_array($result)){//recursividad de la lista
 
 ?>
 <tr>
-    <td><?php echo "$show['Nombre']" ?></td>
-    <td><?php echo "$show['Precio']" ?></td>
-    <td><?php echo "$show['Unidades disponibles']" ?></td>
+    <td><?php echo $show['Nombre'] ?></td>
+    <td><?php echo $show['Precio'] ?></td>
+    <td><?php echo $show['Unidades disponibles'] ?></td>
     <td><a href="#">Test</a></td>
 
 </tr>
