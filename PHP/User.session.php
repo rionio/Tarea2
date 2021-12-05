@@ -21,6 +21,9 @@ $datos=pg_fetch_row($consulta);
 if($cantidad>0){
     $_SESSION['nombre_usuario']=$datos[1];
     $_SESSION['ROL']= $datos[2];
+    $_SESSION['email']= $datos[0];
+    $_SESSION['contraseña']= $datos[4];
+    $_SESSION['img']=$datos[5];
     header("location: index.php"); //redireccion 
 }else{
     session_destroy();
