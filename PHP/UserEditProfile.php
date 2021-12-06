@@ -1,10 +1,5 @@
 <?php 
     include("template/Header.php"); 
-    if(!isset($_SERVER['HTTP_REFERER'])){
-        // redirect them to your desired location
-        header('location: ./index.php');
-        exit;
-    }
 ?>
 <div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;">
 	<div class="card login-form" style="	width:100%;margin:20px;">

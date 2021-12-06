@@ -1,10 +1,6 @@
 <?php
   require './BDconexion.php'; //file conexion
-  if(!isset($_SERVER['HTTP_REFERER'])){
-    // redirect them to your desired location
-    header('location: ./index.php');
-    exit;
-  }
+
   $conn = CConexion::ConexionBD();
   $user=$_POST['_username'];
   $email=$_POST['_email'];

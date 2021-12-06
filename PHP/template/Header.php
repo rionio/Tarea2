@@ -8,10 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <link rel="stylesheet" href="./CSS/bootstrap.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <style>
+    body{ 
+      background: url(https://i.redd.it/x3ovn9pyx3271.png) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    </style>
 </head>
 <body>
   <?php
-      require_once("User.isLogin.php");
+    require_once("User.isLogin.php");
   ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
@@ -43,7 +52,7 @@
         </form>
       </ul>
         <?php
-           if($status){
+          if($status){
             echo'
                 <ul class="navbar-nav mr-auto" style="width: 13%; float:right">
                   <li class="nav-item dropdown">
@@ -61,9 +70,9 @@
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="User.close.php">Salir</a>
                     </div>
-                  </li>
-                  <img src="https://lh3.googleusercontent.com/proxy/7GkW6bKqAnbzN4Yeg_4TkF6ItfqocMD1kMFUZrf7n5AtWuY9LieNOQjFO2nU93zVCaOQw1kJoeLqyi90frAX48xuQX7z7cycL-aYRu0vEmk1LhDIbGZZ0nAt6XJ_pu2xrv4koGo=w1200-h630-p-k-no-nu" width="50">
-
+                  </li>'
+                  . $image.
+                  '
                 </ul>
             ';
           }else{
@@ -82,6 +91,5 @@
     </div>
   </div>
 </nav>
-
     <div class="container">
         <div class="row">
