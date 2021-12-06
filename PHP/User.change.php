@@ -25,8 +25,27 @@
   $name=comp($_SESSION['nombre_usuario'],$_POST['_new_name']);
   $email=comp($_SESSION['email'],$_POST['_new_email']);
   $pass=comp($_SESSION['contraseña'],$_POST['_new_password']);
-  $img=comp_img($_SESSION['img'],$_POST['_new_img']);
   $rol= $_SESSION['ROL'];
+
+  if($_FILES["_new_img"]["error"]>0){
+    echo "Error al cargar archivo";
+  }else{
+    $path= 'image/'.$rol.'/';
+    $img= $path.$_FILES["_new_img"]["name"];
+    if(!file_exists($path)){
+      mkdir($path);
+    }
+    if(!file_exists($img)){
+      $resultado= move_uploaded_file($_FILES["_new_img"]["tmp_name"],$img);
+      if($resultado){
+        echo "Archivo Guardado";
+      }else{
+        echo "Error";
+      }
+    }
+  }
+  
+
 
   $change_query=<<<SQL
   UPDATE cuenta SET
