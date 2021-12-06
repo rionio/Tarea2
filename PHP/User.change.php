@@ -30,7 +30,7 @@
   if($_FILES["_new_img"]["error"]>0){
     echo "Error al cargar archivo";
   }else{
-    $path= 'image/'.$rol.'/';
+    $path= 'image/users'.$rol.'/';
     $img= $path.$_FILES["_new_img"]["name"];
     if(!file_exists($path)){
       mkdir($path);
@@ -38,7 +38,6 @@
     if(!file_exists($img)){
       $resultado= move_uploaded_file($_FILES["_new_img"]["tmp_name"],$img);
       if($resultado){
-        echo "Archivo Guardado";
       }else{
         echo "Error";
       }
