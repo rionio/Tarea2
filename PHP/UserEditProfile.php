@@ -6,7 +6,7 @@
     <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
       <h1 class="card-title text-left" style="width: 60%; heigth: 10%">Editar Perfil</h1>
       <div class="card-text">
-        <form action="./User.change.php" method="POST" style="	padding-top: 10px;font-size: 14px;margin-top: 30px;">
+        <form action="./User.change.php" method="POST" enctype="multipart/form-data" style=" padding-top: 10px;font-size: 14px;margin-top: 30px;">
           <div class="form-group" style="width: 65%;float: left;">
             <label class="col-form-label col-form-label-lg mt-4" for="input">Nuevo Nombre de usuario</label>
             <input class="form-control form-control-lg" type="text" name="_new_name" id="inputLarge">  
@@ -18,7 +18,8 @@
           <div class="form-group" style="width: 30%; float: right">
             <img src="https://lh3.googleusercontent.com/proxy/7GkW6bKqAnbzN4Yeg_4TkF6ItfqocMD1kMFUZrf7n5AtWuY9LieNOQjFO2nU93zVCaOQw1kJoeLqyi90frAX48xuQX7z7cycL-aYRu0vEmk1LhDIbGZZ0nAt6XJ_pu2xrv4koGo=w1200-h630-p-k-no-nu"
             width="300">
-            <input class="form-control" type="file" style="margin-top: 25px;" name="_new_img" id="formFile">
+            <label class="col-form-label col-form-label-lg mt-4" for="file">Nueva foto de perfil</label>
+            <input class="form-control" type="file" style="margin-top: 15px;" name="_new_img" id="file" accept="image/*">
           </div>
           <input type="submit" value="Realizar cambio" style="margin-top: 15px; float: bottom" class="btn btn-outline-info" onclick="return confirm('Confirmar cambios?')"/>
         </form>

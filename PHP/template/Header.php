@@ -71,8 +71,7 @@
                       <a class="dropdown-item" href="User.close.php">Salir</a>
                     </div>
                   </li>'
-                  . $image.
-                  '
+                  . $image.'width="50">
                 </ul>
             ';
           }else{
