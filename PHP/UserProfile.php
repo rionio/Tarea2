@@ -7,7 +7,7 @@
       <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
         <div style="width: 45%; float:right">
         <?php
-         echo $image.'width="420" style="border: 5px solid #65D8FF;">';
+         echo $image.'width="420" style="border: 5px solid #65D8FF; float:right">';
         ?>
          <p></p>
         </div>
@@ -21,9 +21,10 @@
             <h4 class="list-group-item list-group-item-action active">Cant. profuctos vendidos: <?php echo 'test'; //aqui va la cant venta?></h4>
             <h4 class="list-group-item list-group-item-action active">Cant. profuctos comprados: <?php echo 'test'; //aqui va cant compra?></h4> 
           </div>
-          <p></p>
-          <input type="submit" value="Borrar Perfil" class="btn btn-outline-danger" onclick="return confirm('estas seguro?')"/>
         </div>
+        <form action="./User.delete.php" method="POST" style=" padding-top: 10px;font-size: 14px;margin-top: 30px;">
+        <input type="submit" value="Borrar Perfil" style="float: bottom; margin-top: 15px;" class="btn btn-outline-danger" onclick="return confirm('estas seguro?')"/>
+        </form>
       </div>
     </div>
   </div>

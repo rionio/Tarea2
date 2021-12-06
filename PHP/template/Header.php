@@ -63,7 +63,7 @@
                     </a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="UserProfile.php">Perfil</a>
-                      <a class="dropdown-item" href="#">Carrito</a>
+                      <a class="dropdown-item" href="UserCart.php">Carrito</a>
                       <a class="dropdown-item" href="#">Historial Compra</a>
                       <a class="dropdown-item" href="#">Historial Venta</a>
                       <a class="dropdown-item" href="UserSell.php">Vender producto</a>
@@ -71,7 +71,7 @@
                       <a class="dropdown-item" href="User.close.php">Salir</a>
                     </div>
                   </li>'
-                  . $image.'width="50">
+                  . $image.'width="50" style="border-radius: 25px">
                 </ul>
             ';
           }else{
