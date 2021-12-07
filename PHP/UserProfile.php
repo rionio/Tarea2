@@ -23,7 +23,7 @@
           </div>
         </div>
         <form action="./User.delete.php" method="POST" style=" padding-top: 10px;font-size: 14px;margin-top: 30px;">
-        <input type="submit" value="Borrar Perfil" style="float: bottom; margin-top: 15px;" class="btn btn-outline-danger" onclick="return confirm('estas seguro?')"/>
+          <input type="submit" value="Borrar Perfil" style="float: bottom; margin-top: 15px;" class="btn btn-outline-danger" onclick="return confirm('estas seguro?')"/>
         </form>
       </div>
     </div>
