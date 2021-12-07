@@ -15,7 +15,7 @@
   if($_FILES["_img_product"]["error"]>0){
     echo "Error al cargar archivo";
   }else{
-    $path= 'image/products'.$rol.'/';
+    $path= 'image/products/'.$rol.'/';
     $img= $path.$_FILES["_img_product"]["name"];
     if(!file_exists($path)){
       mkdir($path);
