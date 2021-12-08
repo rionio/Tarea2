@@ -27,7 +27,6 @@
     $user_name=pg_fetch_row($user);
 
 ?>
-
 <div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;" backg>
     <div class="card login-form" style="	width:100%;margin:20px;">
         <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
@@ -56,12 +55,31 @@
                                 <h3>$<?php echo $price; ?></h3>
                             </div>
                             <p></p>
-                            <button type="button" class="btn btn-outline-warning">Añadir al carro</button>
-                        </div>
+                            <script>
+                              function verify(status){
+                                if(status){
+                                  Swal.fire({
+                                    icon: 'success',
+                                    title: 'Agregado correctamente',
+                                    text: '¡sigue comprando!',
+                                    footer: '<a href="ProductsShop.php">Tienda</a>'
+                                  });
+                                }else{
+                                  Swal.fire({
+                                    icon: 'error',
+                                    title: 'Oops...',
+                                    text: '¡Inicia sesion para poder agregar tus compras al carrito',
+                                    showConfirmButton: false,
+                                    footer: '<a href="UserSignIn.php">Iniciar sesion</a>'
+                                  });
+                                }
+                              }
+                            </script>
+                            <button class="add-btn btn-outline-warning mt-auto" onclick="verify(<?php echo $status;?>)"> Añadir al carrito</button>
 
+                        </div>
                     </div>
             </div>
-
         </div>
         <div class="container"><p></p>
         <h3><abbr title="attribute">Comentarios</abbr></h3>
