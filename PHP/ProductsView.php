@@ -4,27 +4,27 @@
 
     // $id=$_GET['id'];
 
-    // $find_query=<<<SQL
-    // SELECT * FROM producto
-    // WHERE "ID_Producto"=$id
-    // SQL;
+    $find_query=<<<SQL
+    SELECT * FROM producto
+    WHERE "ID_Producto"=$id
+    SQL;
 
-    // $item=pg_query($conn,$find_query);
-    // $values=pg_fetch_row($item);
-    // $name=$values[1];
-    // $description=$values[3];
-    // $price=$values[4];
-    // $amount=$values[5];
-    // $rol=$values[6];
-    // $img=$values[7];
+    $item=pg_query($conn,$find_query);
+    $values=pg_fetch_row($item);
+    $name=$values[1];
+    $description=$values[3];
+    $price=$values[4];
+    $amount=$values[5];
+    $rol=$values[6];
+    $img=$values[7];
 
-    // $name_query=<<<SQL
-    // SELECT * FROM cuenta
-    // WHERE "ROL"=$rol
-    // SQL;
+    $name_query=<<<SQL
+    SELECT * FROM cuenta
+    WHERE "ROL"=$rol
+    SQL;
 
-    // $user=pg_query($conn,$name_query);
-    // $user_name=pg_fetch_row($user);
+    $user=pg_query($conn,$name_query);
+    $user_name=pg_fetch_row($user);
 
 ?>
 <div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;" backg>
