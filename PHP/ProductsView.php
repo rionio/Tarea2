@@ -1,8 +1,8 @@
 <?php include("template/Header.php");
-    // require "./BDconexion.php";
-    // $conn= CConexion::ConexionBD();
+    require "./BDconexion.php";
+    $conn= CConexion::ConexionBD();
 
-    // $id=$_GET['id'];
+    $id=$_GET['id'];
 
     $find_query=<<<SQL
     SELECT * FROM producto
