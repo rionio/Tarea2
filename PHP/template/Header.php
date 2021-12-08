@@ -93,9 +93,10 @@
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="UserProfile.php">Perfil</a>
                       <a class="dropdown-item" href="UserCart.php">Carrito</a>
+                      <a class="dropdown-item" href="UserSell.php">Vender producto</a>
+                      <a class="dropdown-item" href="UserAdmin.php">Administrar venta</a>
                       <a class="dropdown-item" href="#">Historial Compra</a>
                       <a class="dropdown-item" href="#">Historial Venta</a>
-                      <a class="dropdown-item" href="UserSell.php">Vender producto</a>
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="User.close.php">Salir</a>
                     </div>
