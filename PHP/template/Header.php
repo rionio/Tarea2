@@ -51,8 +51,18 @@
   <?php
     require_once("User.isLogin.php");
   ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
+
+  <style>
+  .sticky {
+	position: -webkit-sticky;
+	position: sticky;
+  z-index: 100;
+	top: 0;
+}
+  </style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky">
+  <div class="container-fluid block">
     <a class="navbar-brand" href="index.php">SansApp</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
