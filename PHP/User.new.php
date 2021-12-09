@@ -10,16 +10,16 @@
 
   $register_query=<<<SQL
   INSERT INTO cuenta(
-  "Email", "Nombre", "ROL", "Fecha de nacimiento", "Contraseña")
+  email, nombre, rol, fecha_nacimiento, "contraseña")
   VALUES ($1, $2, $3, $4, $5)
   SQL;
   $validation_email_query=<<<SQL
   SELECT * FROM cuenta
-  WHERE "Email"=$1
+  WHERE email=$1
   SQL;
   $validation_rol_query=<<<SQL
   SELECT * FROM cuenta
-  WHERE "ROL"=$1
+  WHERE rol=$1
   SQL;
 
   $flag_email=pg_prepare($conn,"Validation_email",$validation_email_query);
@@ -52,7 +52,7 @@
     echo('
         <script language="javascript">
               alert("Intentelo de nuevo, usuario no registrado");
-              window.location = "./UserSignUp.php";  
+              //window.location = "./UserSignUp.php";  
         </script>
     ');
   }
