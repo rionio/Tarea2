@@ -16,7 +16,7 @@
   echo'
   <script language="javascript">
         alert("Productos Comprados, Muchas gracias");
-        //window.location = "./ProductsShop.php";
+        window.location = "./ProductsShop.php";
   </script>
   ';
 ?>
