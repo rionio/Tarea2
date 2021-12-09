@@ -1,17 +1,17 @@
 <?php
   require './BDconexion.php';
-  $conn = CConexion::ConexionBD();
 
-  session_start();
-  
-  $id=$_POST['_id'];
-  $rol=$_SESSION['ROL'];
-  $amount=$_POST['_amount'];
   $status=$_POST['_status'];
-  $price=$_POST['_price'];
-
 
   if($status){
+    $conn = CConexion::ConexionBD();
+
+    session_start();
+    
+    $id=$_POST['_id'];
+    $rol=$_SESSION['ROL'];
+    $amount=$_POST['_amount'];
+    $price=$_POST['_price'];
 
     $add_order_query=<<<SQL
     INSERT INTO orden_compra VALUES($1,$2,$3,$4,0)
@@ -44,25 +44,4 @@
     </script>
     ';
   }
-
-/*
-
-  if($insert){
-    echo'
-    <script language="javascript">
-          alert("Producto agregado correctamente");
-          window.location = "./index.php";
-    </script>
-    ';
-  }else{
-    echo'
-    <script language="javascript">
-          alert("Producto no agregado, intentelo de nuevo");
-          //window.location = "./UserSell.php";
-    </script>
-    ';
-  }
- */
-
-
 ?>

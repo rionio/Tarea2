@@ -41,6 +41,7 @@
                 <table class="table table-hover">
                   <tr class="table-primary">
                     <th>Producto</th>
+                    <th>Total Ventas</th>
                   </tr>
                   <?php
                     require './BDconexion.php';
@@ -52,9 +53,11 @@
                     $arr=pg_fetch_all($best_view);
                     foreach($arr as $row){
                       $name=$row["nombre"];
+                      $total=$row["veces_vendido"];
                       echo '
                       <tr class="table-light">
                       <th scope="row">'.$name.'</th>
+                      <td>'.$total.'</td>
                       ';
                     }    
                   ?>
@@ -65,46 +68,51 @@
           <td>
                 <div class="col-md-10">
                   <div class="form-group">
-                  <h2>Top Mejor Calificacion</h2>
-                    <table class="table table-hover">
-                      <tr class="table-primary">
-                        <th>Producto</th>
-                      </tr>
-                      <?php
-                      // $sql="select * from top" //(top es una vista con el top)
-                      // $result=pg_query(conexion,$sql) //consulta
-                      // while ($mostrar=pg_fetch_array($result)){
+                    <h2>Top Mejor Calificacion</h2>
+                      <table class="table table-hover">
+                        <tr class="table-primary">
+                          <th>Producto</th>
+                        </tr>
+                        <?php
+                        // $sql="select * from top" //(top es una vista con el top)
+                        // $result=pg_query(conexion,$sql) //consulta
+                        // while ($mostrar=pg_fetch_array($result)){
 
-                    //  ?> 
-                  <!--<tr>
-                        <td><?php echo $mostrar['Producto'] ?></td>
-                      </tr> -->
-                      <?php 
-                    //  }
-                     ?>
-                    </table>
+                      //  ?> 
+                    <!--<tr>
+                          <td><?php echo $mostrar['Producto'] ?></td>
+                        </tr> -->
+                        <?php 
+                      //  }
+                      ?>
+                      </table>
           </td>
           <td>
                 <div class="col-md-10">
                   <div class="form-group" >
-                  <h2>Top Usuarios con mas ventas</h2>
-                    <table class="table table-hover">
-                      <tr class="table-primary">
-                        <th>Nombre Usuario</th>
-                      </tr>
-                      <?php
-                      // $sql="select * from top" //(top es una vista con el top)
-                      // $result=pg_query(conexion,$sql) //consulta
-                      // while ($mostrar=pg_fetch_array($result)){
-
-                    //  ?> 
-                  <!--<tr>
-                        <td><?php echo $mostrar['Producto'] ?></td>
-                      </tr> -->
-                      <?php 
-                    //  }
-                     ?>
-                    </table>
+                    <h2>Top Usuarios con mas ventas</h2>
+                      <table class="table table-hover">
+                        <tr class="table-primary">
+                          <th>Nombre Usuario</th>
+                          <th>Total Ventas</th>
+                        </tr>
+                        <?php
+                          $best_user_query=<<<SQL
+                          SELECt * FROM user_best_seller
+                          SQL;
+                          $best_user_view=pg_query($conn,$best_user_query);
+                          $arr=pg_fetch_all($best_user_view);
+                          foreach($arr as $row){
+                            $name=$row["nombre"];
+                            $total=$row["total_ventas"];
+                            echo '
+                            <tr class="table-light">
+                            <th scope="row">'.$name.'</th>
+                            <td>'.$total.'</td>
+                            ';
+                          }    
+                        ?>
+                      </table>
           </td>
         </tr>
       </table>
