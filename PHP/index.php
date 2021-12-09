@@ -43,17 +43,21 @@
                     <th>Producto</th>
                   </tr>
                   <?php
-                      // $sql="select * from top" //(top es una vista con el top)
-                      // $result=pg_query(conexion,$sql) //consulta
-                      // while ($mostrar=pg_fetch_array($result)){
-
-                    //  ?> 
-                  <!--<tr>
-                        <td><?php echo $mostrar['Producto'] ?></td>
-                      </tr> -->
-                      <?php 
-                    //  }
-                     ?>
+                    require './BDconexion.php';
+                    $conn = CConexion::ConexionBD();
+                    $best_query=<<<SQL
+                    SELECt * FROM best_seller
+                    SQL;
+                    $best_view=pg_query($conn,$best_query);
+                    $arr=pg_fetch_all($best_view);
+                    foreach($arr as $row){
+                      $name=$row["nombre"];
+                      echo '
+                      <tr class="table-light">
+                      <th scope="row">'.$name.'</th>
+                      ';
+                    }    
+                  ?>
                 </table>
                 </div>
               </div>

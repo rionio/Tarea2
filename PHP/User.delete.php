@@ -7,6 +7,7 @@
   
   $rol=$_SESSION['ROL'];
   $path= 'image/users/'.$rol;
+  $img_path='image/products/'.$rol.'/';
   $img=$_SESSION['img'];
   
   $delete_query=<<<SQL
@@ -30,7 +31,7 @@
     echo('
           <script language="javascript">
               alert("wea borrada");
-              //window.location = "./UserSignIn.php";  
+              window.location = "./UserSignIn.php";  
           </script>
       ');
   }else{
