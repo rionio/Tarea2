@@ -6,7 +6,7 @@
 
     $find_query=<<<SQL
     SELECT * FROM producto
-    WHERE "ID_Producto"=$id
+    WHERE id_producto=$id
     SQL;
 
     $item=pg_query($conn,$find_query);
@@ -20,7 +20,7 @@
 
     $name_query=<<<SQL
     SELECT * FROM cuenta
-    WHERE "ROL"=$rol
+    WHERE rol=$rol
     SQL;
 
     $user=pg_query($conn,$name_query);
@@ -56,28 +56,22 @@
                                 <h3>$<?php echo $price; ?></h3>
                             </div>
                             <p></p>
-                            <script>
-                              function verify(status){
-                                if(status){
-                                  Swal.fire({
-                                    icon: 'success',
-                                    title: 'Agregado correctamente',
-                                    text: '¡sigue comprando!',
-                                    footer: '<a href="ProductsShop.php">Tienda</a>'
-                                  });
-                                }else{
-                                  Swal.fire({
-                                    icon: 'error',
-                                    title: 'Oops...',
-                                    text: '¡Inicia sesion para poder agregar tus compras al carrito',
-                                    showConfirmButton: false,
-                                    footer: '<a href="UserSignIn.php">Iniciar sesion</a>'
-                                  });
-                                }
-                              }
-                            </script>
-                            <button class="add-btn btn-outline-warning mt-auto" onclick="verify(<?php echo $status;?>)"> Añadir al carrito</button>
-
+                            <form action="Products.add.php" method="POST">
+                            <div class="form-group">
+                              <label for="exampleSelect1" class="form-label mt-4">Cantidad</label>
+                              <select class="form-select" style="width:10%;padding: 0px" id="cantidad" name="_amount">
+                                <?php
+                                  for($i=1;$i<=$amount;$i++){
+                                    echo '<option value='.$i.'>'.$i.'</option>';
+                                  }
+                                ?>
+                              </select>
+                            </div>
+                            <input name="_id" type="hidden" value=<?php echo $id;?>>
+                            <input name="_status" type="hidden" value=<?php echo $status;?>>
+                            <input name="_price" type="hidden" value=<?php echo $price;?>>
+                            <button class="add-btn btn-outline-warning mt-auto" type="submit" href="Product.add.php"> Añadir al carrito</button>
+                            </form>
                         </div>
                     </div>
             </div>

@@ -75,8 +75,8 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Nosotros</a>
         </li>
-        <form class="d-flex">
-            <input class="form-control me-sm-2" style="height: 45px;" type="text" placeholder="Search">
+        <form class="d-flex" action="Products.search.php" method="POST">
+            <input class="form-control me-sm-2" name="name"style="height: 45px;" type="text" placeholder="Search">
             <button class="btn-outline-secondary  btn-sm my-2 my-sm-0" style="border-radius: 18px; width: 190px" type="submit">Search</button>
         </form>
       </ul>

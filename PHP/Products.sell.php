@@ -32,13 +32,12 @@
 
   $add_query=<<<SQL
   INSERT INTO producto(
-    "Nombre", "Categoria", "Descripcion", "Precio", "Unidades disponibles", "ROL", "Imagen")
+    nombre, categoria, descripcion, precio, unidades, rol, imagen)
     VALUES ($1, $2, $3, $4, $5, $6, $7);
   SQL;
 
   $insert=pg_prepare($conn,"Insert",$add_query);
   $insert=pg_execute($conn,"Insert",array($name,$category,$description,$price,$amount,$rol,$img));
-  $error=pg_result_error($insert);
   if($insert){
     echo'
     <script language="javascript">
@@ -52,7 +51,7 @@
           alert("Producto no agregado, intentelo de nuevo");
           //window.location = "./UserSell.php";
     </script>
-    '.$error;
+    ';
   }
 
 ?>

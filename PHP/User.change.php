@@ -30,7 +30,7 @@
   if($_FILES["_new_img"]["error"]>0){
     echo "Error al cargar archivo";
   }else{
-    $path= 'image/users'.$rol.'/';
+    $path= 'image/users/'.$rol.'/';
     $img= $path.$_FILES["_new_img"]["name"];
     if(!file_exists($path)){
       mkdir($path);
@@ -48,13 +48,13 @@
 
   $change_query=<<<SQL
   UPDATE cuenta SET
-    "Email"=$1, "Nombre"=$2, "Contraseña"=$3, "Foto de perfil"=$4
-  WHERE "ROL"=$5;
+    email=$1, nombre=$2, "contraseña"=$3, foto_perfil=$4
+  WHERE rol=$5;
   SQL;
 
   $validation_email_query=<<<SQL
   SELECT * FROM cuenta
-  WHERE "Email"=$1
+  WHERE email=$1
   SQL;
 
   $flag_email=pg_prepare($conn,"Validation_email",$validation_email_query);

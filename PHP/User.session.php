@@ -7,7 +7,7 @@ $email=$_POST['_email']; //extraxion de info del login
 $pass=$_POST['_password'];
 
 $query=<<<SQL
-SELECT * FROM cuenta WHERE "Email"= $1 AND "Contraseña"=$2
+SELECT * FROM cuenta WHERE email= $1 AND "contraseña"=$2
 SQL; //consulta base de datos
 $consulta=pg_prepare($conn,"Validation",$query);
 $consulta=pg_execute($conn,"Validation",array($email,$pass));
