@@ -1,32 +1,32 @@
 <?php include("template/Header.php");
-    require "./BDconexion.php";
-    $conn= CConexion::ConexionBD();
+    // require "./BDconexion.php";
+    // $conn= CConexion::ConexionBD();
 
-    $id=$_GET['id'];
+//     $id=$_GET['id'];
 
-    $find_query=<<<SQL
-    SELECT * FROM producto
-    WHERE id_producto=$id
-    SQL;
+//     $find_query=<<<SQL
+//     SELECT * FROM producto
+//     WHERE id_producto=$id
+//     SQL;
 
-    $item=pg_query($conn,$find_query);
-    $values=pg_fetch_row($item);
-    $name=$values[1];
-    $description=$values[3];
-    $price=$values[4];
-    $amount=$values[5];
-    $rol=$values[6];
-    $img=$values[7];
+//     $item=pg_query($conn,$find_query);
+//     $values=pg_fetch_row($item);
+//     $name=$values[1];
+//     $description=$values[3];
+//     $price=$values[4];
+//     $amount=$values[5];
+//     $rol=$values[6];
+//     $img=$values[7];
 
-    $name_query=<<<SQL
-    SELECT * FROM cuenta
-    WHERE rol=$rol
-    SQL;
+    // $name_query=<<<SQL
+    // SELECT * FROM cuenta
+    // WHERE rol=$rol
+    // SQL;
 
-    $user=pg_query($conn,$name_query);
-    $user_name=pg_fetch_row($user);
+//     $user=pg_query($conn,$name_query);
+//     $user_name=pg_fetch_row($user);
 
-?>
+// ?>
 <div class="global-container" style="	height:100%; display: flex;align-items: center;justify-content: center;" backg>
     <div class="card login-form" style="	width:100%;margin:20px;">
         <div class="card-body" style="color: steelblue;background-color: whitesmoke;">
@@ -91,6 +91,25 @@
                 <th>test2</th>
                 
             </tr> 
+            <?php
+            
+            $com_query=<<<SQL
+            SELECT * FROM comentario
+            WHERE id_producto=$id
+            SQL;
+            
+            $comment=pg_query($conn,$com_query);
+
+            while($allcom=pg_fetch_array($comment)){
+            ?>
+            <tr>
+              <td><?php echo $allcom['rol']?></td>
+              <td><?php echo $allcom['valoracion']?></td>
+              <td><?php echo $allcom['descripcion']?></td>
+            </tr>
+            <?php
+            }
+            ?>
             </table>
         </div>
         </div>
